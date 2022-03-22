@@ -1,0 +1,8 @@
+{
+    "liveServer.settings.https": {
+    "enable": true, //set it true to enable the feature.
+    "cert": "C:/Users/jcarreres/Desktop/ServidorBabylon/cert/cert.pem", //full path of the certificate
+    "key": "C:/Users/jcarreres/Desktop/ServidorBabylon/cert/key.pem", //full path of the private key
+    "passphrase": "12345"
+    }
+    }

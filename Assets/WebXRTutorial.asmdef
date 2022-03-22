@@ -1,0 +1,17 @@
+{
+    "name": "WebXRTutorial",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fd4abe4ffe74ef1448afe15c6cb36bb7",
+        "GUID:f9fe0089ec81f4079af78eb2287a6163"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
