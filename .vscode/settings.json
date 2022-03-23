@@ -1,4 +1,4 @@
-﻿{
+{
     "files.exclude":
     {
         "**/.DS_Store":true,
@@ -52,5 +52,15 @@
         "ProjectSettings/":true,
         "temp/":true,
         "Temp/":true
+    },
+    
+    "liveServer.settings.https": 
+    {
+        "enable": true, //set it true to enable the feature.
+        "cert": "C:/Users/jcarr/Desktop/CertificadosHTTPS/cert.pem", //full path of the certificate
+        "key": "C:/Users/jcarr/Desktop/CertificadosHTTPS/key.pem", //full path of the private key
+        "passphrase": "12345"
+        
     }
+    
 }

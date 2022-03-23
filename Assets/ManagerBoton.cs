@@ -8,28 +8,41 @@ public class ManagerBoton : MonoBehaviour
     [SerializeField] BotonMuñeca _botonMuñeca;
     public GameObject panelMenu;
 
-    private void OnEnable() {
 
+    private void OnEnable() {
         _botonMuñeca.onHit.AddListener(_RegisterHit);
-  
     }
 
     private void OnDisable() {
-        _botonMuñeca.onHit.RemoveListener(_RegisterHit);
-
+        _botonMuñeca.onHit.RemoveListener(_RegisterNoHit);
     }
 
     void _RegisterHit()
     {
-        if(panelMenu.activeSelf == true){
-            panelMenu.SetActive(false);
-        }
-        
-        if(panelMenu.activeSelf == false)
+    
+        if(panelMenu.activeSelf == true)
         {
-            panelMenu.SetActive(true);
-        }
+            panelMenu.SetActive(false);
+            var boton = _botonMuñeca.gameObject.GetComponent<Renderer>();
+                Color colorBoton = new Color(0, 0, 0, 0);
+                boton.material.SetColor("_Color",colorBoton);
+            
+
+            }else
+            {
+                panelMenu.SetActive(true);
+                var boton = _botonMuñeca.gameObject.GetComponent<Renderer>();
+                Color colorBoton = new Color(0, 0, 1, 1);
+                boton.material.SetColor("_Color",colorBoton);
+            }
         
+
+    }
+
+    void _RegisterNoHit()
+    {
+    
+        Debug.Log("Hola?");
 
     }
 }

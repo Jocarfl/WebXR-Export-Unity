@@ -6,13 +6,19 @@ using System.Collections.Generic;
   public class GestoAbrirMenu : MonoBehaviour
   {
 
-      public WebXRController controller;
+      public WebXRController controllerR;
+      public WebXRController controllerL;
       public Canvas canvas;
+
+      private WebXRHandData handData;
+      private WebXRHandJoint handJoint;
+
+      private WebXRJointData jointData;
       
 
        void Update() {
 
-        if(controller.GetButtonDown(WebXRController.ButtonTypes.Trigger)){
+        if(controllerR.GetButtonDown(WebXRController.ButtonTypes.Trigger) || controllerL.GetButtonDown(WebXRController.ButtonTypes.Trigger)){
 
             if(canvas.gameObject.activeSelf == false){
                 canvas.gameObject.SetActive(true);
@@ -20,11 +26,7 @@ using System.Collections.Generic;
             {
                 canvas.gameObject.SetActive(false);
             }
-
         }
-        
-
       }
-
     }
 
