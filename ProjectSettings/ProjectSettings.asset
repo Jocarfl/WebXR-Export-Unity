@@ -142,6 +142,8 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 2392736516088910113, guid: 07c9e3c700b19a642a7bc5fc84920f1c, type: 2}
   - {fileID: 11400000, guid: 0e8ed3c2412573e4e87c93263a382f3d, type: 2}
+  - {fileID: 0}
+  - {fileID: 3650652299015139103, guid: 794c371f46ecaf540a91588965455862, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -287,7 +289,7 @@ PlayerSettings:
     m_StaticBatching: 1
     m_DynamicBatching: 0
   - m_BuildTarget: WebGL
-    m_StaticBatching: 0
+    m_StaticBatching: 1
     m_DynamicBatching: 0
   m_BuildTargetGraphicsJobs:
   - m_BuildTarget: MacStandaloneSupport
@@ -350,7 +352,9 @@ PlayerSettings:
     Android: 1
     iPhone: 1
     tvOS: 1
-  m_BuildTargetGroupLightmapEncodingQuality: []
+  m_BuildTargetGroupLightmapEncodingQuality:
+  - m_BuildTarget: WebGL
+    m_EncodingQuality: 0
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetNormalMapEncoding: []
   playModeTestRunnerEnabled: 0

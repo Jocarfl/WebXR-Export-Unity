@@ -8,41 +8,39 @@ public class ManagerBoton : MonoBehaviour
     [SerializeField] BotonMuñeca _botonMuñeca;
     public GameObject panelMenu;
 
-
     private void OnEnable() {
         _botonMuñeca.onHit.AddListener(_RegisterHit);
     }
 
     private void OnDisable() {
-        _botonMuñeca.onHit.RemoveListener(_RegisterNoHit);
+        _botonMuñeca.onHit.RemoveListener(_RegisterHit);
     }
 
     void _RegisterHit()
     {
-    
         if(panelMenu.activeSelf == true)
+        {       
+            Off();
+        }
+        else
         {
-            panelMenu.SetActive(false);
-            var boton = _botonMuñeca.gameObject.GetComponent<Renderer>();
-                Color colorBoton = new Color(0, 0, 0, 0);
-                boton.material.SetColor("_Color",colorBoton);
-            
-
-            }else
-            {
-                panelMenu.SetActive(true);
-                var boton = _botonMuñeca.gameObject.GetComponent<Renderer>();
-                Color colorBoton = new Color(0, 0, 1, 1);
-                boton.material.SetColor("_Color",colorBoton);
-            }
-        
-
+            On();
+        }
     }
 
-    void _RegisterNoHit()
+    private void On()
     {
-    
-        Debug.Log("Hola?");
+        panelMenu.SetActive(true);
+        var boton = _botonMuñeca.gameObject.GetComponent<Renderer>();
+        Color colorBoton = new Color(0, 0, 1, 1);
+        boton.material.SetColor("_Color",colorBoton);
+    }
 
+    private void Off()
+    {
+        panelMenu.SetActive(false);
+        var boton = _botonMuñeca.gameObject.GetComponent<Renderer>();
+        Color colorBoton = new Color(0, 0, 0, 0);
+        boton.material.SetColor("_Color",colorBoton);
     }
 }
