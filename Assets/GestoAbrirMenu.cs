@@ -7,37 +7,56 @@ using System.Collections.Generic;
   {
 
       public WebXRController controllerL;
-      public Canvas canvas;
+      public WebXRController controllerR;
+      public Canvas menuHUD;
+      public Canvas menuSpace;
+
+      public Transform  cameraFollower;
       
 
-       void Update() {
-
+       void Update()
+       {
            if(controllerL.isHandActive)
            {
-               if(canvas.gameObject.activeSelf == false)
+               if(menuHUD.gameObject.activeSelf == false)
                {
-                    On();
+                    ShowMenuHUD();
                }
                else
                {
-                   Off();
+                   HideMenuHUD();
                }
            }
+
+           if(controllerR.isHandActive)
+           {
+              
+           }
+
+
         }
 
-        private void On(){
-              
+        private void ShowMenuHUD()
+        {    
             if(controllerL.GetButtonDown(WebXRController.ButtonTypes.Trigger))
             {
-                canvas.gameObject.SetActive(true);
+                menuHUD.gameObject.SetActive(true);
             }
         }
 
-        private void Off(){
-
+        private void HideMenuHUD()
+        {
             if(controllerL.GetButtonDown(WebXRController.ButtonTypes.Trigger))
             {
-                canvas.gameObject.SetActive(false);
+                menuHUD.gameObject.SetActive(false);
+            }
+        }
+
+        private void StartMenu()
+        {
+            if(controllerR.GetButtonDown(WebXRController.ButtonTypes.Trigger))
+            {
+                //Instantiate(menuSpace,);
             }
         }
     }
