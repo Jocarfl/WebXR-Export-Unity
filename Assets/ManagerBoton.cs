@@ -32,7 +32,7 @@ public class ManagerBoton : MonoBehaviour
     {
         panelMenu.SetActive(true);
         var boton = _botonMuñeca.gameObject.GetComponent<Renderer>();
-        Color colorBoton = new Color(0, 0, 1, 1);
+        Color colorBoton = new Color(84, 116, 167, 255);
         boton.material.SetColor("_Color",colorBoton);
     }
 
@@ -40,7 +40,7 @@ public class ManagerBoton : MonoBehaviour
     {
         panelMenu.SetActive(false);
         var boton = _botonMuñeca.gameObject.GetComponent<Renderer>();
-        Color colorBoton = new Color(0, 0, 0, 0);
+        Color colorBoton = new Color(20, 28, 42, 1);
         boton.material.SetColor("_Color",colorBoton);
     }
 }
