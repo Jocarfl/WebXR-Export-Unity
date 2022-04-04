@@ -15,6 +15,7 @@ public class BotonMuñeca : MonoBehaviour
         }       
     }
 
+    //Desactivar collider durante 1s para que no detecte todo el rato que estas pulsando
     private IEnumerator DesactivarTrigger()
     {
         this.gameObject.GetComponent<SphereCollider>().enabled = false;
