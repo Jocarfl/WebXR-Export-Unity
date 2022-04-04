@@ -11,7 +11,6 @@ public class Pulsaciones : MonoBehaviour
     public Transform cameraFollower;
     public SpriteRenderer emojiRender;
     public float tiempo = 50f;
-    private float contM = 0;
 
     // Update is called once per frame
     void Update()
@@ -38,26 +37,22 @@ public class Pulsaciones : MonoBehaviour
         if(tiempo > 120 && tiempo < 160)
         {         
             CambiarEmoji(emoji[2]);
-            MostrarNotificacion();
-            
+            MostrarNotificacion();        
         }
-
     }
 
-    private void CambiarEmoji(Sprite emoji){
-
+    private void CambiarEmoji(Sprite emoji)
+    {
         emojiRender.sprite = emoji;
-
     }
 
-    private void MostrarNotificacion(){
-
-        notificacion.SetActive(true);
-                     
+    private void MostrarNotificacion()
+    {
+        notificacion.SetActive(true);            
     }
 
-    private void BorrarNotificacion(){
-
+    private void BorrarNotificacion()
+    {
         notificacion.SetActive(false);
     }
 

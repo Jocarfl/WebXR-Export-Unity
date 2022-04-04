@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,6 +156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "_botonMu\xF1eca": {fileID: 1078887225}
   panelMenu: {fileID: 1832589180}
+  textHoraB: {fileID: 1711707690}
+  textFechaB: {fileID: 684494584}
 --- !u!1 &238978850
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +236,11 @@ Transform:
 Camera:
   m_CorrespondingSourceObject: {fileID: 20092747195267750, guid: 54a613ba6e982e84db04156af08d6a89, type: 3}
   m_PrefabInstance: {fileID: 1121782831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!102 &684494584 stripped
+TextMesh:
+  m_CorrespondingSourceObject: {fileID: 7455602165774523744, guid: 831a1bab6996b9648aec8274155726d4, type: 3}
+  m_PrefabInstance: {fileID: 751992880}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
@@ -917,6 +924,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8946505525633915141, guid: e561d3527d36c4a40bfac13d723e0f93, type: 3}
   m_PrefabInstance: {fileID: 1389647384}
+  m_PrefabAsset: {fileID: 0}
+--- !u!102 &1711707690 stripped
+TextMesh:
+  m_CorrespondingSourceObject: {fileID: 5070138877678666372, guid: 831a1bab6996b9648aec8274155726d4, type: 3}
+  m_PrefabInstance: {fileID: 751992880}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1832589180 stripped
 GameObject:
